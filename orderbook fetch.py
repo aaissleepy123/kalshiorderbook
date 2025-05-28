@@ -40,7 +40,7 @@ def fetch_orderbook_data(ticker: str, depth: Optional[int] = None) -> Dict[str, 
         Dict[str, Any]: JSON response from Kalshi's orderbook API.
     """
     base_url = "https://api.elections.kalshi.com"
-    path = f"/trade-api/v2/markets/{ticker}/orderbook"
+    path = f"/trade-api/v2/markets?series_ticker={ticker}/orderbook"
 
     # Prepare full URL with optional query parameters
     params = {}
@@ -60,5 +60,5 @@ def fetch_orderbook_data(ticker: str, depth: Optional[int] = None) -> Dict[str, 
 
 
 # Example usage
-data = fetch_orderbook_data("kxhighny", 10)
+data = fetch_orderbook_data("KXHIGHNY", 10)
 print(data)
