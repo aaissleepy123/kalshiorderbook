@@ -8,7 +8,7 @@ from dotenv import load_dotenv
 load_dotenv()
 api_key = dotenv.find_dotenv("api_key")
 
-file_path="/Users/anitahua/Desktop/TradingBot/ScrapingKalshiDataRealTime/test1.txt"
+file_path="your/path/here"
 def load_private_key_from_file(file_path):
     with open(file_path, "rb") as key_file:
         private_key = serialization.load_pem_private_key(
